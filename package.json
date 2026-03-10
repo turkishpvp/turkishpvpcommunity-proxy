@@ -1,0 +1,9 @@
+{
+    "name":  "@turkishpvp/turkishpvpcommunity-proxy",
+    "version":  "1.0.10",
+    "private":  true,
+    "main":  "index.js",
+    "scripts":  {
+                    "prepare":  "echo \"turkishpvpcommunity-proxy: nothing to build\""
+                }
+}
