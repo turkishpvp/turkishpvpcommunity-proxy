@@ -1,6 +1,13 @@
 version: 2
+registries:
+  verdaccio:
+    type: npm-registry
+    url: https://verdaccio.turkishpvp.llc
+    token: "${{secrets.VERDACCIO_TOKEN}}"
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    registries:
+      - verdaccio
