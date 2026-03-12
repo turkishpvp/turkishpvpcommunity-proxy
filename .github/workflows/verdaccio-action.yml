@@ -1,4 +1,4 @@
-﻿name: Publish to Verdaccio Action (Test)
+name: Publish to Verdaccio Action (Test)
 on:
   push:
     branches:
