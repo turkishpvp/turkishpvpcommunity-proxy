@@ -16,14 +16,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://verdaccio.turkishpvp.llc/'
 
       - name: Setup npmrc for private registry
         run: |
           echo "registry=https://registry.npmjs.org/" > .npmrc
           echo "@turkishpvp:registry=https://verdaccio.turkishpvp.llc/" >> .npmrc
           echo "//verdaccio.turkishpvp.llc/:_authToken=${{ secrets.VERDACCIO_TOKEN }}" >> .npmrc
-          echo "//verdaccio.turkishpvp.llc/:always-auth=true" >> .npmrc
           echo "legacy-peer-deps=true" >> .npmrc
 
       - name: Install dependencies
