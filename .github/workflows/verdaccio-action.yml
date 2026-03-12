@@ -30,7 +30,7 @@ jobs:
       - name: Build project if exists
         run: npm run build --if-present
 
-      - name: Publish with Verdaccio
-        uses: verdaccio/github-actions/publish@master
+      - name: Publish with npm natively
+        run: npm publish --registry https://verdaccio.turkishpvp.llc/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.VERDACCIO_TOKEN }}
