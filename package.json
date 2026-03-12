@@ -1,6 +1,6 @@
 {
     "name":  "@turkishpvp/turkishpvpcommunity-proxy",
-    "version":  "1.0.16",
+    "version":  "1.0.17",
     "publishConfig":  {
                           "registry":  "https://verdaccio.turkishpvp.llc/",
                           "access":  "restricted"
