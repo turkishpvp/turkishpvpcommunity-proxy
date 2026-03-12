@@ -1,15 +1,15 @@
 {
-    "name":  "@turkishpvp/turkishpvpcommunity-proxy",
-    "version":  "1.0.18",
-    "publishConfig":  {
-                          "registry":  "https://verdaccio.turkishpvp.llc/",
-                          "access":  "restricted"
-                      },
-    "main":  "index.js",
-    "scripts":  {
-                    "prepare":  "echo \"turkishpvpcommunity-proxy: nothing to build\""
-                },
-    "devDependencies":  {
-                            "@types/node":  "^25.4.0"
-                        }
+  "name": "@turkishpvp/turkishpvpcommunity-proxy",
+  "version": "1.0.18",
+  "publishConfig": {
+    "registry": "https://verdaccio.turkishpvp.llc/",
+    "access": "restricted"
+  },
+  "main": "index.js",
+  "scripts": {
+    "prepare": "echo \"turkishpvpcommunity-proxy: nothing to build\""
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0"
+  }
 }
