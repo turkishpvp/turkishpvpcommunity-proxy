@@ -1,6 +1,6 @@
 {
     "name":  "@turkishpvp/turkishpvpcommunity-proxy",
-    "version":  "1.0.20",
+    "version":  "1.0.21",
     "publishConfig":  {
                           "registry":  "https://verdaccio.turkishpvp.llc/",
                           "access":  "restricted"
@@ -10,7 +10,8 @@
                     "prepare":  "echo \"turkishpvpcommunity-proxy: nothing to build\""
                 },
     "devDependencies":  {
-                            "@types/node":  "^25.4.0"
+                            "typescript":  "^5.9.3",
+                            "@types/node":  "^25.5.0"
                         },
     "exports":  {
                     ".":  "./dist/index.js"
