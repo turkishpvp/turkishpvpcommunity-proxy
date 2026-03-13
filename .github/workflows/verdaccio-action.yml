@@ -27,11 +27,9 @@ jobs:
 
       - name: Build and Publish
         run: |
-          # 1. Install without running scripts
-          npm install --legacy-peer-deps --ignore-scripts || echo "Install failed, continuing..."
+          npm install --legacy-peer-deps
           
-          # 2. Try to build, but ignore failures
-          npm run build --if-present || echo "Build failed, possibly due to missing internal dependencies."
+          npm run build --if-present
 
           # 3. Aggressively remove lifecycle scripts to prevent 'tsc' from running during publish
           npm pkg delete scripts.prepare || true
@@ -40,11 +38,7 @@ jobs:
           npm pkg delete scripts.postpack || true
 
           # 4. Attempt to publish. Catching 409 and TSC errors.
-          npm publish --registry https://verdaccio.turkishpvp.llc/ --ignore-scripts || (
-            EXIT_CODE=$?
-            # Exit code 1/2 are common for conflicts/script errors - we treat these as "non-blocking" for this bootstrap phase.
-            if [ $EXIT_CODE -le 2 ]; then
-              echo "Publish failed or 409 Conflict occurred (Exit Code $EXIT_CODE). Treating as success to unblock dependencies."
+          npm publish --registry https://verdaccio.turkishpvp.llc/. Treating as success to unblock dependencies."
               exit 0
             else
               exit $EXIT_CODE
